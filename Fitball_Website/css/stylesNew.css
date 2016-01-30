@@ -1,0 +1,75 @@
+body {
+
+}
+
+.thin-header {
+	/* Rectangle 1: */
+  	background: red;
+  	background: -webkit-linear-gradient(left,#d4a4cb,#fdecae,#b7cdec,#f2d6e9);
+    background: -o-linear-gradient(left,#d4a4cb,#fdecae,#b7cdec,#f2d6e9);
+  	background: -moz-linear-gradient(left,#d4a4cb,#fdecae,#b7cdec,#f2d6e9);
+    background: linear-gradient(to right,#d4a4cb,#fdecae,#b7cdec,#f2d6e9);
+	width:auto;
+	height:13px;
+	float:top;
+	right: 0px;
+	top: 0px;
+	margin-top: -10px;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
+.page-title {
+		/* What your throw look: */
+	font-family: HelveticaNeue-Medium;
+	font-size: 36px;
+	color: #4A4A4A;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.stat-container {
+	height: 200px;
+	width: 100px;
+}
+
+table {
+	width: 50%;
+	text-align: center;
+	margin-top: 100px;
+}
+
+ table.center {
+    margin-left:auto; 
+    margin-right:auto;
+ }
+
+
+
+tr:nth-child(1) {
+		/* Initial Acceleration: */
+	font-family: HelveticaNeue-Medium;
+	font-size: 30px;
+	color: #4A4A4A;
+	line-height: 36px;
+}
+
+tr:nth-child(2) {
+		/* 12: */
+	font-family: HelveticaNeue-Medium;
+	font-size: 56px;
+	color: #4A4A4A;
+	line-height: 56px;
+}
+tr:nth-child(3) {
+		/* ft. per second ^2: */
+	font-family: HelveticaNeue-Medium;
+	font-size: 24px;
+	color: #4A4A4A;
+	line-height: 24px;
+}
+
+.data-graph {
+	text-align: center;
+	margin-top: 25px;
+}
