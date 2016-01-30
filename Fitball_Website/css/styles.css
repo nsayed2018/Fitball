@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Ek+Mukta);
+
 .first-header {
 	/* Rectangle 1: */
 	background: #F6F6F6;
@@ -42,16 +44,6 @@
 
 }
 
-.title {
-		/* FitBall: */
-	font-family: HelveticaNeue-Medium;
-	font-size: 100px;
-	color: #4A4A4A;
-	line-height: 24px;
-	text-align: center;
-	margin-top: -750px;
-}
-
 .scroll-arrow {
 	height: 200px;
 	width: 25px;
@@ -71,7 +63,7 @@
 
  .scroll-text {
 	 	/* Scroll to continue: */
-	font-family: HelveticaNeue-Medium;
+	font-family: Ek Mukta;
 	font-size: 12px;
 	color: #4A4A4A;
 	line-height: 24px;
