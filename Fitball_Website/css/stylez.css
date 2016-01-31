@@ -1,0 +1,220 @@
+@import url(https://fonts.googleapis.com/css?family=Ek+Mukta);
+
+/*= GENERAL STYLING
+--------------------------------------------------------*/
+.center { margin: 0 auto; }
+.content{ margin: 0 auto; width: auto; }
+.clear { clear: both; }
+a.lpanel { float: left; color: #e1e1e1; font-size: 12px; font-family:"Wellfleet"; text-decoration: none; margin: 7px 11px; }
+a.rpanel { float: right; color: #e1e1e1;  font-size: 12px; font-family:"Wellfleet"; text-decoration: none; margin: 7px 11px; }
+
+a.lpanel:hover{ color: #fff; }
+a.rpanel:hover{ color: #fff; }
+
+/*= HEADER & NAVIGATION
+--------------------------------------------------------*/
+
+#header { 
+	width:100%;
+	background: #F6F6F6;
+	height:75px;
+	position: fixed;
+	margin-top: -10px;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
+
+
+#nav { 
+	background-color: transparent;
+	width: 75px;
+	float: left;
+}
+
+#logo a {
+	text-align: center;
+	margin-left: 45%;
+}
+
+.second-header {
+	/* Rectangle 1: */
+    background: linear-gradient(to right,#d4a4cb,#fdecae,#b7cdec,#f2d6e9);
+	width:auto;
+	height:15px;
+	right: 0px;
+	top: 0px;
+	margin-left: -10px;
+	margin-right: -10px;
+	margin-top: -75px;
+} 
+
+/*= SLIDES STYLING
+--------------------------------------------------------*/
+
+#slide1, #slide2{ width: 100%; }
+#slide1{
+	color: black;
+	height: 600px;
+	margin: 0;
+	padding: 200px 0 260px 0;
+	background-size: cover;
+}
+
+#slide2{
+	background-color: #fff;
+	color: #333333;
+	height: 600px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 200px 0;
+}
+
+#slide3{
+	background: url(../img/slide3.jpg) 50% 0 no-repeat fixed;
+	color: #fff;
+	height: 600px;
+	padding: 170px 0 0 0;	
+	background-size: cover;
+}
+
+#slide4{
+	background-color: #fff;
+	color: #333333;
+	height: 600px;
+	padding: 200px 0;
+}
+
+#slide5{
+	background: url(../img/slide5.jpg) 50% 0 no-repeat fixed;
+	height: 600px;
+	margin: 0 auto;
+	padding: 250px 0;
+	color: #fff;
+	background-size: cover;
+}
+
+/*= ORIGINAL STYLING
+--------------------------------------------------------*/
+
+
+.title-container {
+
+	height: 200px;
+	width: 400px;
+	margin: 150px auto;
+	margin-top: -75px;
+}
+
+@-webkit-keyframes example {
+    from {color:black;}
+    to{color:white;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    from {color:black;}
+    to{color:white;}
+}
+
+.scroll-arrow {
+	height: 200px;
+	width: 10px;
+	margin-top: -10px;
+
+}
+
+.arrow {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 10px 10px 0 10px;
+	border-color: #4A4A4A transparent transparent transparent;
+	margin-left: 50%;
+ }
+
+ .scroll-text {
+ 	-webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 3;
+    animation-direction: reverse;
+	 	/* Scroll to continue: */
+	font-family: Ek Mukta;
+	font-size: 14px;
+	color: #4A4A4A;
+	line-height: 24px;
+	text-align: center;
+	margin-top: -100px;
+ }
+
+ .background-pic {
+ 	margin-top: -150px;
+ 	margin-left: -100px;
+ }
+
+ /*= THROW DATA
+--------------------------------------------------------*/
+
+img.icon {
+
+}
+
+.page-title {
+		/* What your throw look: */
+	font-family: Ek Mukta;
+	font-size: 48px;
+	color: #4A4A4A;
+	text-align: center;
+	margin-top: -40px;
+}
+
+.stat-container {
+	height: 200px;
+	width: 100px;
+}
+
+ table.metrics {
+    margin-left:auto; 
+    margin-right:auto;
+    border-spacing: 150px 0px;
+    text-align: center;
+    width: 100%;
+    margin-left: -100px;
+
+ }
+
+table.icons {
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+tr:nth-child(1) {
+		/* Initial Acceleration: */
+	font-family: Ek Mukta;
+	font-size: 30px;
+	color: #4A4A4A;
+	line-height: 36px;
+}
+
+tr:nth-child(2) {
+		/* 12: */
+	font-family: Ek Mukta;
+	font-size: 56px;
+	color: #4A4A4A;
+	line-height: 56px;
+}
+tr:nth-child(3) {
+		/* ft. per second ^2: */
+	font-family: Ek Mukta;
+	font-size: 24px;
+	color: #4A4A4A;
+	line-height: 24px;
+}
+
+.data-graph {
+	text-align: center;
+	margin-top: 25px;
+}

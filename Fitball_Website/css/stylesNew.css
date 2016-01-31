@@ -17,6 +17,10 @@
 	margin-right: -10px;
 }
 
+img.icon {
+
+}
+
 .page-title {
 		/* What your throw look: */
 	font-family: Ek Mukta;
@@ -31,18 +35,16 @@
 	width: 100px;
 }
 
-table {
-		text-align: center;
-	margin-top: 100px;
+table.icons {
+	margin-top: -50px;
 }
-
-table.space {
-  border-spacing: 100px 0px;
-  }
 
  table.center {
     margin-left:auto; 
     margin-right:auto;
+    border-spacing: 100px 0px;
+    text-align: center;
+	margin-top: 100px;
  }
 
 
