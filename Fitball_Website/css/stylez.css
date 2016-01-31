@@ -24,6 +24,11 @@ a.rpanel:hover{ color: #fff; }
 	margin-right: -10px;
 }
 
+a.active {
+	color: black;
+	text-decoration: none;
+}
+
 
 
 #nav { 
@@ -71,7 +76,7 @@ a.rpanel:hover{ color: #fff; }
 }
 
 #slide3{
-	background: url(../img/slide3.jpg) 50% 0 no-repeat fixed;
+	background: url(../img/slide3.jpg) 10% 0 no-repeat fixed;
 	color: #fff;
 	height: 600px;
 	padding: 170px 0 0 0;	
@@ -99,22 +104,24 @@ a.rpanel:hover{ color: #fff; }
 
 
 .title-container {
-
 	height: 200px;
 	width: 400px;
 	margin: 150px auto;
 	margin-top: -75px;
 }
 
-@-webkit-keyframes example {
-    from {color:black;}
-    to{color:white;}
+@-webkit-keyframes flash {
+   	0% {color:black;border-color: #4A4A4A transparent transparent transparent;}
+    50%{color:white;border-color: transparent transparent transparent transparent;}
+   	100% {color:black;border-color: #4A4A4A transparent transparent transparent;}
+}
 }
 
 /* Standard syntax */
-@keyframes example {
-    from {color:black;}
-    to{color:white;}
+@keyframes flash {
+    0% {color:black;border-color: #4A4A4A transparent transparent transparent;}
+    50%{color:white;border-color: transparent transparent transparent transparent;}
+   	100% {color:black;border-color: #4A4A4A transparent transparent transparent;}
 }
 
 .scroll-arrow {
@@ -130,17 +137,22 @@ a.rpanel:hover{ color: #fff; }
 	border-style: solid;
 	border-width: 10px 10px 0 10px;
 	border-color: #4A4A4A transparent transparent transparent;
-	margin-left: 50%;
+	margin-left: 200px;
+	-webkit-animation-name: flash; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+    animation-name: flash;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
  }
 
  .scroll-text {
- 	-webkit-animation-name: example; /* Chrome, Safari, Opera */
+ 	-webkit-animation-name: flash; /* Chrome, Safari, Opera */
     -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
     -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
-    animation-name: example;
-    animation-duration: 4s;
-    animation-iteration-count: 3;
-    animation-direction: reverse;
+    animation-name: flash;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 	 	/* Scroll to continue: */
 	font-family: Ek Mukta;
 	font-size: 14px;
@@ -158,9 +170,6 @@ a.rpanel:hover{ color: #fff; }
  /*= THROW DATA
 --------------------------------------------------------*/
 
-img.icon {
-
-}
 
 .page-title {
 		/* What your throw look: */
@@ -168,7 +177,6 @@ img.icon {
 	font-size: 48px;
 	color: #4A4A4A;
 	text-align: center;
-	margin-top: -40px;
 }
 
 .stat-container {
@@ -189,6 +197,8 @@ img.icon {
 table.icons {
 	margin-top: 10px;
 	margin-left: 5px;
+    border-spacing: 5px 10px;
+
 }
 
 tr:nth-child(1) {
@@ -217,4 +227,36 @@ tr:nth-child(3) {
 .data-graph {
 	text-align: center;
 	margin-top: 25px;
+}
+
+.ranking-column {
+	background: black;
+	padding-top: 45px;
+	margin-right: 50px;
+	height: 400px;
+	width:300px;
+	float:right;
+}
+
+.icon-grid {
+	margin-top: 2em;
+	margin-bottom: 3em;
+	float: left;
+	/* overflow: auto;	Make the parent contains the floated children */	
+}
+
+
+/* Float each item in the list to make it display in a grid */
+/* We've used the border box reset so we don't have to worry about combining widths and margins */
+.icon-grid li {
+	float: left;
+	margin-right: 1.5%;
+	margin-bottom: 1em;
+	max-width: 20%;
+}
+
+.icon-grid ul{
+	margin-left: 16%;
+	margin-right: 3%;
+
 }
