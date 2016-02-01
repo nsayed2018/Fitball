@@ -4,6 +4,8 @@
 	   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<link href="css/stylez.css" rel="stylesheet" type="text/css">
 	   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+        <script src = "http://d3js.org/d3.v3.min.js"></script>
+         <script src = "js/fitd.js"></script>	
 		<script> 
 
 		<!----- JQUERY FOR SLIDING NAVIGATION --->   
@@ -128,7 +130,69 @@
 	
 	<div id="slide4">
 	   	<div class="page-title" style="margin-top: -45px">FitBall on Canvas</div>		
-	   	<img id="throw-graph" src="img/throw-canvas.png" width="700px"> 				
+	   	<div id= "plotSVG">
+            	
+         <svg id="visualisation" width="600" height="300"></svg>
+            
+            <script>
+				var svg = d3.select("#visualisation");
+
+				var bezierLine = d3.svg.line()
+				    .x(function(d) { return d[0]; })
+				    .y(function(d) {return d[1];})
+				    .interpolate("basis");
+
+				function getRandomColor() {
+				    var letters = '0123456789ABCDEF'.split('');
+				    var color = '#';
+				    for (var i = 0; i < 6; i++ ) {
+				        color += letters[Math.floor(Math.random() * 16)];
+				    }
+				    return color;
+				}
+
+				function plotTrajectory(maxTime, maxHeight, endTime){
+				    var svg = d3.select("#plotSVG").select("svg")
+				    svg.append('path')
+				        .attr("d", bezierLine([[0, 300], [260, 50], [750, 300]]))
+				        .attr("stroke", getRandomColor())
+				        .attr("stroke-width", 2)
+				        .attr("fill", "none")
+				        .transition()
+				            .duration(2000)
+				            .attrTween("stroke-dasharray", function() {
+				                var len = this.getTotalLength();
+				                return function(t) { return (d3.interpolateString("0," + len, len + ",0"))(t) };
+				            });
+				    svg.append('path')
+				        .attr("d", bezierLine([[0, 300], [230, 75], [650, 300]]))
+				        .attr("stroke", getRandomColor())
+				        .attr("stroke-width", 2)
+				        .attr("fill", "none")
+				        .transition()
+				            .duration(2000)
+				            .attrTween("stroke-dasharray", function() {
+				                var len = this.getTotalLength();
+				                return function(t) { return (d3.interpolateString("0," + len, len + ",0"))(t) };
+				            });
+				    svg.append('path')
+				        .attr("d", bezierLine([[0, 300], [150, 65], [350, 300]]))
+				        .attr("stroke", getRandomColor())
+				        .attr("stroke-width", 2)
+				        .attr("fill", "none")
+				        .transition()
+				            .duration(2000)
+				            .attrTween("stroke-dasharray", function() {
+				                var len = this.getTotalLength();
+				                return function(t) { return (d3.interpolateString("0," + len, len + ",0"))(t) };
+				            });
+				        
+				} 
+
+        </script>
+              <button onclick="plotTrajectory()">DATA</button>
+            
+        </div>							
     </div> 
 	
 	
